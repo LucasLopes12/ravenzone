@@ -1,4 +1,3 @@
-// src/controllers/pixController.js
 import { criarPixQRCode, checarStatusPix } from "../services/pixService.js";
 
 export async function gerarPagamentoPix(req, res) {

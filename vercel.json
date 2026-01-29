@@ -1,5 +1,12 @@
 {
-  "routes": [
-    { "src": "/", "dest": "/frontend/pages/index.html" }
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "frontend/index.html"
+    }
   ]
 }
