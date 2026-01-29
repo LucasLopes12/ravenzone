@@ -6,19 +6,18 @@ export default async function handler(req, res) {
   try {
     const payload = req.body;
 
-    const { event, data } = payload;
+    console.log("🔔 Webhook Abacate Pay");
+    console.log("Evento:", payload.event);
 
-    console.log("🔔 Webhook recebido:", event);
-
-    if (event === "billing.paid") {
+    if (payload.event === "billing.paid") {
       console.log("✅ PAGAMENTO CONFIRMADO");
-      console.log("Billing ID:", data.id);
-      console.log("Valor:", data.amount);
+      console.log("Billing ID:", payload.data.id);
+      console.log("Valor:", payload.data.amount);
     }
 
     return res.status(200).json({ received: true });
   } catch (err) {
-    console.error("Erro webhook:", err.message);
+    console.error("Erro webhook:", err);
     return res.status(500).json({ error: "Erro interno" });
   }
 }
