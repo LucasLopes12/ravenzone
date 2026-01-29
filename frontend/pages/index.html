@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../src/output.css">
+  <title>Raven Zone</title>
+</head>
+
+<body class="bg-black">
+
+<header class="fixed inset-x-0 top-0 z-50">
+  
+  <ul
+    id="menu"
+    class="fixed top-0 left-0 right-0 bottom-0 z-[99] bg-black text-white list-none pt-16 -translate-x-full transition-transform duration-200">
+    <li><a class="menuItem block p-4" href="#">Início</a></li>
+    <li><a class="menuItem block p-4" href="#">Perfil</a></li>
+    <li><a class="menuItem block p-4" href="#">Marketplace</a></li>
+    <li><a class="menuItem block p-4" href="#">Contate-nos</a></li>
+  </ul>
+
+  <button
+    id="hamburger"
+    class="fixed top-4 left-4 z-[100] bg-white rounded p-2">
+    <img src="../assets/reorder_24dp_E3E3E3.svg" id="menuIcon">
+    <img src="../assets/close_24dp_E3E3E3.svg" id="closeIcon" class="hidden">
+  </button>
+
+</header>
+
+<script src="../components/navbar.js"></script>
+</body>
+</html>
